@@ -6,73 +6,123 @@
 <title>Engga Setya Dewi</title>
 
 <style>
-body{
-    margin:0;
-    font-family:Arial,sans-serif;
-    background:linear-gradient(135deg,#ffd6e7,#fff);
-    text-align:center;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
 }
 
-.kartu{
-    max-width:400px;
-    margin:50px auto;
-    background:white;
-    padding:30px;
-    border-radius:20px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.15);
+body{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#ff9ecf,#ffd6e7,#ffffff);
+padding:20px;
+}
+
+.card{
+width:100%;
+max-width:420px;
+background:rgba(255,255,255,0.25);
+backdrop-filter:blur(15px);
+padding:30px;
+border-radius:25px;
+text-align:center;
+box-shadow:0 8px 30px rgba(0,0,0,0.15);
+animation:muncul 1s ease;
+}
+
+@keyframes muncul{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.foto{
+width:120px;
+height:120px;
+border-radius:50%;
+margin:auto;
+background:white;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:60px;
 }
 
 h1{
-    color:#ff4f8b;
+margin-top:15px;
+color:#ff2f7d;
 }
 
-p{
-    color:#555;
+.bio{
+margin-top:10px;
+color:#444;
+line-height:1.6;
 }
 
-.tombol{
-    display:block;
-    margin:12px auto;
-    padding:14px;
-    width:80%;
-    text-decoration:none;
-    color:white;
-    border-radius:12px;
-    font-weight:bold;
+.btn{
+display:block;
+margin-top:15px;
+padding:15px;
+border-radius:15px;
+text-decoration:none;
+font-weight:bold;
+color:white;
+transition:0.3s;
 }
 
-.wa{ background:#25D366; }
-.yt{ background:#FF0000; }
-.ig{ background:#E1306C; }
+.btn:hover{
+transform:scale(1.05);
+}
+
+.wa{background:#25D366;}
+.ig{background:#E1306C;}
+.yt{background:#FF0000;}
 
 .footer{
-    margin-top:20px;
-    color:#888;
-    font-size:14px;
+margin-top:20px;
+font-size:13px;
+color:#666;
 }
 </style>
 </head>
+
 <body>
 
-<div class="kartu">
+<div class="card">
 
-<h1>🌸 Engga Setya Dewi 🌸</h1>
+<div class="foto">🌸</div>
 
-<p>
+<h1>Engga Setya Dewi</h1>
+
+<p class="bio">
 Tidak semua kisah harus didengar,<br>
 sebagian cukup dipahami oleh hati.
 </p>
 
-<a class="tombol wa" href="https://wa.me/6283195289657">
-💬 Chat WhatsApp
+<a class="btn wa"
+href="https://wa.me/6283195289657">
+💬 WhatsApp
 </a>
 
-<a class="tombol yt" href="https://youtube.com/@lucunyamereka" target="_blank">
-▶️ Channel YouTube Lucunya Mereka
+<a class="btn ig"
+href="https://www.instagram.com/its_dewi.__/"
+target="_blank">
+📸 Instagram
 </a>
 
-<a class="tombol ig" href="https://www.instagram.com/its_dewi.__/" target="_blank">
-📸 Instagram Saya
+<a class="btn yt"
+href="https://youtube.com/@lucunyamereka"
+target="_blank">
+▶️ YouTube Lucunya Mereka
 </a>
 
 <div class="footer">
