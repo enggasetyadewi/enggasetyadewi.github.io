@@ -1,0 +1,28 @@
+body{
+    font-family:Arial,sans-serif;
+    margin:0;
+    background:#f7f7f7;
+}
+
+header{
+    background:#ff69b4;
+    color:white;
+    text-align:center;
+    padding:40px;
+}
+
+section{
+    background:white;
+    margin:20px;
+    padding:20px;
+    border-radius:15px;
+}
+
+button{
+    background:#ff69b4;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:10px;
+    font-size:16px;
+}
