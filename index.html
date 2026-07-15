@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Website Engga</title>
+
+<style>
+body{
+    background:#ffe6f2;
+    text-align:center;
+    font-family:Arial;
+}
+
+h1{
+    color:hotpink;
+    font-size:40px;
+}
+
+p{
+    color:#444;
+    font-size:20px;
+}
+</style>
+
+</head>
+<body>
+
+<h1>🌸 Engga Setya Dewi 🌸</h1>
+
+<p>Ini kisah bukan untuk didengar, melainkan untuk dirasakan.</p>
+
+<img src="https://picsum.photos/300" width="300">
+<button onclick="alert('Halo Engga! 🌸')">
+Klik Aku
+</button>
+<h2 id="jam"></h2>
+
+<script>
+setInterval(() => {
+  document.getElementById("jam").innerHTML =
+    new Date().toLocaleTimeString();
+}, 1000);
+</script>
+</body>
+</html>
+

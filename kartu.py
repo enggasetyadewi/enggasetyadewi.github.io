@@ -1,0 +1,7 @@
+print("╔══════════════════════╗")
+print("║   🌸 PROFIL ENGGA 🌸   ║")
+print("╠══════════════════════╣")
+print("║ Nama : Engga Setya Dewi")
+print("║ Umur : 21 Tahun")
+print("║ Motto: Tetap melangkah")
+print("╚══════════════════════╝")
