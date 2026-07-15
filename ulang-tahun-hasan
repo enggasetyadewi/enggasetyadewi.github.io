@@ -1,1 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Happy Birthday Hasan Azhary</title>
+<style>
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    text-align: center;
+    color: white;
+}
 
+.container {
+    padding: 50px 20px;
+}
+
+h1 {
+    font-size: 45px;
+}
+
+.card {
+    background: rgba(255,255,255,0.2);
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 600px;
+    margin: auto;
+    backdrop-filter: blur(10px);
+}
+
+p {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.heart {
+    font-size: 60px;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    50% {transform: scale(1.2);}
+}
+
+button {
+    background: white;
+    color: #ff6b81;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 30px;
+    font-size: 18px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="heart">❤️</div>
+
+<h1>Happy Birthday</h1>
+
+<div class="card">
+
+<h2>Hasan Azhary</h2>
+
+<p>
+🎂 10 Maret 2005 🎂
+</p>
+
+<p>
+Selamat ulang tahun untuk seseorang yang begitu spesial.
+Semoga di umur yang baru ini, semua impianmu perlahan menjadi nyata,
+diberikan kesehatan, kebahagiaan, dan kesuksesan.
+</p>
+
+<p>
+Terima kasih sudah menjadi seseorang yang berarti.
+Semoga senyummu selalu ada, langkahmu selalu dimudahkan,
+dan hatimu selalu dipenuhi dengan hal-hal indah.
+</p>
+
+<p>
+Aku berharap bisa selalu melihatmu bahagia,
+menemani setiap perjalananmu,
+dan menjadi alasan kecil di balik senyummu. ❤️
+</p>
+
+<button>
+Love You Hasan ❤️
+</button>
+
+</div>
+
+</div>
+
+</body>
+</html>
