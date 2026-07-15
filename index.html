@@ -1,66 +1,21 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>Engga Setya Dewi</title>
-
-<style>
-body{
-    background: linear-gradient(to bottom, #ffd6e7, #fff);
-    font-family: Arial, sans-serif;
-    text-align:center;
-    padding:40px;
-}
-
-.kartu{
-    background:white;
-    max-width:400px;
-    margin:auto;
-    padding:25px;
-    border-radius:20px;
-    box-shadow:0 0 15px rgba(0,0,0,0.2);
-}
-
-h1{
-    color:#ff4f8b;
-}
-
-p{
-    color:#555;
-}
-
-.tombol{
-    display:inline-block;
-    padding:12px 20px;
-    background:#25D366;
-    color:white;
-    text-decoration:none;
-    border-radius:10px;
-    margin-top:15px;
-}
-</style>
-
-</head>
 <body>
-
-<div class="kartu">
 
 <h1>🌸 Engga Setya Dewi 🌸</h1>
 
-<p>
-Belajar Python, Termux, dan Website.
-</p>
+<button onclick="bijak()">
+Kata Bijak
+</button>
 
-<p>
-"Tidak semua kisah harus didengar,
-sebagian cukup dipahami oleh hati."
-</p>
+<p id="hasil"></p>
 
-<a class="tombol" href="https://wa.me/6283195289657">
-💬 Hubungi Saya
-</a>
-
-</div>
+<script>
+function bijak() {
+    document.getElementById("hasil").innerHTML =
+    "Tidak semua kisah harus didengar, sebagian cukup dipahami oleh hati.";
+}
+</script>
 
 </body>
 </html>
