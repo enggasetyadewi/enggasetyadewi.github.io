@@ -3,78 +3,130 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Selamat Wisuda Hasan Azhary</title>
+<title>Engga Setya Dewi</title>
 
 <style>
-body{
-    margin:0;
-    font-family:Arial,sans-serif;
-    background:linear-gradient(135deg,#e3f2fd,#ffffff);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    min-height:100vh;
-    text-align:center;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
 }
 
-.kartu{
-    max-width:700px;
-    background:white;
-    padding:40px;
-    border-radius:20px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+body{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#ff9ecf,#ffd6e7,#ffffff);
+padding:20px;
+}
+
+.card{
+width:100%;
+max-width:420px;
+background:rgba(255,255,255,0.25);
+backdrop-filter:blur(15px);
+padding:30px;
+border-radius:25px;
+text-align:center;
+box-shadow:0 8px 30px rgba(0,0,0,0.15);
+animation:muncul 1s ease;
+}
+
+@keyframes muncul{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.foto{
+width:120px;
+height:120px;
+border-radius:50%;
+margin:auto;
+background:white;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:60px;
 }
 
 h1{
-    color:#1565c0;
+margin-top:15px;
+color:#ff2f7d;
 }
 
-.nama{
-    font-size:28px;
-    font-weight:bold;
-    margin:15px 0;
+.bio{
+margin-top:10px;
+color:#444;
+line-height:1.6;
 }
 
-.pesan{
-    line-height:1.8;
-    color:#444;
-    margin-top:20px;
+.btn{
+display:block;
+margin-top:15px;
+padding:15px;
+border-radius:15px;
+text-decoration:none;
+font-weight:bold;
+color:white;
+transition:0.3s;
 }
 
-.dari{
-    margin-top:30px;
-    font-style:italic;
-    color:#666;
+.btn:hover{
+transform:scale(1.05);
+}
+
+.wa{background:#25D366;}
+.ig{background:#E1306C;}
+.yt{background:#FF0000;}
+
+.footer{
+margin-top:20px;
+font-size:13px;
+color:#666;
 }
 </style>
 </head>
+
 <body>
 
-<div class="kartu">
+<div class="card">
 
-<h1>🎓 Selamat Wisuda 🎓</h1>
+<div class="foto">🌸</div>
 
-<div class="nama">
-Hasan Azhary
-</div>
+<h1>Engga Setya Dewi</h1>
 
-<p>
-Fakultas Ilmu Komputer
+<p class="bio">
+Tidak semua kisah harus didengar,<br>
+sebagian cukup dipahami oleh hati.
 </p>
 
-<div class="pesan">
-Selamat atas keberhasilanmu menyelesaikan perjalanan akademik yang penuh perjuangan.
-Setiap tugas, setiap ujian, dan setiap tantangan yang telah dilalui kini terbayar dengan sebuah pencapaian yang membanggakan.
+<a class="btn wa"
+href="https://wa.me/6283195289657">
+💬 WhatsApp
+</a>
 
-Semoga ilmu yang telah diperoleh menjadi cahaya dalam setiap langkah, membawa manfaat bagi banyak orang, serta mengantarkan pada masa depan yang penuh keberhasilan dan kebahagiaan.
+<a class="btn ig"
+href="https://www.instagram.com/its_dewi.__/"
+target="_blank">
+📸 Instagram
+</a>
 
-Hari ini adalah bukti bahwa kerja keras, kesabaran, dan doa tidak pernah sia-sia.
-Teruslah melangkah, bermimpi, dan berkarya.
-</div>
+<a class="btn yt"
+href="https://youtube.com/@lucunyamereka"
+target="_blank">
+▶️ YouTube Lucunya Mereka
+</a>
 
-<div class="dari">
-Dengan bangga dan penuh doa,<br>
-Engga Setya Dewi 🌸
+<div class="footer">
+Dibuat dengan ❤️ oleh Engga Setya Dewi
 </div>
 
 </div>
