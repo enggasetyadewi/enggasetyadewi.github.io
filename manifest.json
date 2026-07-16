@@ -1,0 +1,9 @@
+{
+  "name": "Tabungan Emas Keluarga",
+  "short_name": "Tabungan Emas",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#fff7d6",
+  "theme_color": "#d4af37",
+  "icons": []
+}
