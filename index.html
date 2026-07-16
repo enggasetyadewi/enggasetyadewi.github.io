@@ -4,17 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Tabungan Emas Keluarga</title>
+<title>Tabungan Emas Premium</title>
 
 <link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#D4AF37">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <style>
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Segoe UI',sans-serif;
+font-family:Segoe UI,sans-serif;
 }
 
 body{
@@ -22,62 +24,58 @@ background:url('https://images.unsplash.com/photo-1610375461246-83df859d849d?q=8
 background-size:cover;
 background-position:center;
 background-attachment:fixed;
-padding:15px;
+}
+
+.overlay{
+background:rgba(0,0,0,.45);
+min-height:100vh;
+padding:20px;
 }
 
 .header{
-background:linear-gradient(135deg,#D4AF37,#FFD700);
-color:white;
-padding:25px;
-border-radius:25px;
 text-align:center;
-box-shadow:0 8px 20px rgba(0,0,0,.15);
+color:white;
 margin-bottom:20px;
 }
 
 .header h1{
-font-size:28px;
+font-size:30px;
 }
 
 .header p{
-margin-top:5px;
-opacity:.9;
+opacity:.8;
 }
 
 .total-card{
-background:white;
-border-radius:25px;
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(15px);
 padding:25px;
+border-radius:25px;
+color:white;
 text-align:center;
-box-shadow:0 5px 15px rgba(0,0,0,.08);
 margin-bottom:20px;
 }
 
-.total-card h3{
-color:#777;
-font-size:14px;
-}
-
 .total{
-font-size:36px;
+font-size:40px;
 font-weight:bold;
-color:#D4AF37;
-margin-top:10px;
+color:#FFD700;
 }
 
 .menu{
 display:grid;
 grid-template-columns:repeat(4,1fr);
-gap:10px;
+gap:12px;
 margin-bottom:20px;
 }
 
 .btn{
-background:white;
-padding:15px 10px;
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(10px);
+padding:15px;
 border-radius:20px;
 text-align:center;
-box-shadow:0 4px 12px rgba(0,0,0,.08);
+color:white;
 cursor:pointer;
 transition:.2s;
 }
@@ -87,88 +85,62 @@ transform:scale(.95);
 }
 
 .btn .icon{
-font-size:30px;
-margin-bottom:5px;
-}
-
-.btn p{
-font-size:12px;
-font-weight:600;
+font-size:28px;
 }
 
 .card{
-background:rgba(255,255,255,0.88);
-backdrop-filter:blur(12px);
+background:white;
+padding:20px;
 border-radius:20px;
-padding:18px;
 margin-bottom:15px;
-box-shadow:0 8px 20px rgba(0,0,0,.15);
+box-shadow:0 8px 20px rgba(0,0,0,.1);
 }
 
 .card h3{
-margin-bottom:12px;
-color:#D4AF37;
+margin-bottom:15px;
+color:#d4af37;
 }
 
 .row{
 display:flex;
 justify-content:space-between;
-padding:8px 0;
+padding:10px 0;
 border-bottom:1px solid #eee;
 }
 
-.value{
-font-weight:bold;
-color:#1976d2;
+.progress{
+background:#eee;
+height:10px;
+border-radius:20px;
+overflow:hidden;
+margin-top:8px;
 }
 
-.note{
-background:#fff8dc;
-padding:10px;
-border-radius:10px;
-margin-top:10px;
-font-size:13px;
+.bar{
+height:100%;
+background:linear-gradient(90deg,#FFD700,#D4AF37);
 }
 
 .footer{
 text-align:center;
+color:white;
 margin-top:20px;
-color:#888;
-font-size:12px;
 }
+
 </style>
 </head>
 
 <body>
-<div class="card">
-<h3>📈 Grafik Aset</h3>
 
-<div style="display:flex;align-items:flex-end;height:180px;gap:20px;justify-content:center">
-
-<div style="width:70px;height:84px;background:#4caf50;border-radius:10px;text-align:center;color:white;padding-top:5px;">
-5.8 Jt
-</div>
-
-<div style="width:70px;height:140px;background:#ff9800;border-radius:10px;text-align:center;color:white;padding-top:5px;">
-10 Jt
-</div>
-
-</div>
-
-<div style="display:flex;justify-content:center;gap:20px;margin-top:10px;">
-<span>Sebelumnya</span>
-<span>Sekarang</span>
-</div>
-
-</div>
+<div class="overlay">
 
 <div class="header">
-<h1>💎 Tabungan Emas Keluarga</h1>
-<p>Hasan Sayang ❤️ Engga Sayang</p>
+<h1>💎 Tabungan Emas Premium</h1>
+<p>Monitoring Aset Keluarga</p>
 </div>
 
 <div class="total-card">
-<h3>TOTAL ASET SAAT INI</h3>
+<p>Total Aset Saat Ini</p>
 <div class="total">Rp10.036.000</div>
 </div>
 
@@ -176,94 +148,107 @@ font-size:12px;
 
 <div class="btn" onclick="alert('Data Hasan Sayang')">
 <div class="icon">👨</div>
-<p>Hasan</p>
+Hasan
 </div>
 
 <div class="btn" onclick="alert('Data Engga Sayang')">
 <div class="icon">👩</div>
-<p>Engga</p>
+Engga
 </div>
 
-<div class="btn" onclick="alert('Riwayat Tabungan')">
+<div class="btn" onclick="window.scrollTo(0,document.body.scrollHeight)">
 <div class="icon">📊</div>
-<p>Riwayat</p>
+Grafik
 </div>
 
-<div class="btn" onclick="alert('Aset Emas')">
-<div class="icon">💎</div>
-<p>Aset</p>
-</div>
-
-</div>
-
-<div class="card">
-<h3>📌 Total Tabungan Sebelumnya</h3>
-
-<div class="row">
-<span>👨 Hasan Sayang</span>
-<span class="value">Rp4.700.000</span>
-</div>
-
-<div class="row">
-<span>👩 Engga Sayang</span>
-<span class="value">Rp1.100.000</span>
-</div>
-
-<div class="row">
-<b>Total</b>
-<b>Rp5.800.000</b>
+<div class="btn" onclick="alert('Total Aset Rp10.036.000')">
+<div class="icon">🏆</div>
+Aset
 </div>
 
 </div>
 
 <div class="card">
-<h3>📌 Tabungan Terbaru</h3>
+<h3>👨 Hasan Sayang</h3>
 
 <div class="row">
-<span>👨 Hasan Sayang</span>
-<span class="value">Rp0</span>
+<span>Total Aset</span>
+<b>Rp4.700.000</b>
 </div>
+
+<div class="progress">
+<div class="bar" style="width:47%"></div>
+</div>
+
+</div>
+
+<div class="card">
+<h3>👩 Engga Sayang</h3>
 
 <div class="row">
-<span>👩 Engga Sayang</span>
-<span class="value">Rp4.236.000</span>
+<span>Total Aset</span>
+<b>Rp5.236.000</b>
 </div>
 
-<div class="note">
-💍 Kalung Santa + Liontin Huruf E<br>
-(Berdasarkan harga saat pembelian)
+<div class="progress">
+<div class="bar" style="width:53%"></div>
 </div>
 
-<div class="row" style="margin-top:10px;">
-<b>Total</b>
+</div>
+
+<div class="card">
+<h3>📈 Grafik Pertumbuhan Aset</h3>
+<canvas id="chart"></canvas>
+</div>
+
+<div class="card">
+<h3>📌 Detail Tabungan Terbaru</h3>
+
+<p>
+💍 Kalung Santa + Liontin Huruf E
+</p>
+
+<br>
+
+<div class="row">
+<span>Nilai Saat Pembelian</span>
 <b>Rp4.236.000</b>
 </div>
 
 </div>
 
-<div class="card">
-<h3>🏆 Akumulasi Total Aset</h3>
-
-<div class="row">
-<span>👨 Hasan Sayang</span>
-<span class="value">Rp4.700.000</span>
-</div>
-
-<div class="row">
-<span>👩 Engga Sayang</span>
-<span class="value">Rp5.236.000</span>
-</div>
-
-<div class="row">
-<b>TOTAL ASET</b>
-<b style="color:#D4AF37;">Rp10.036.000</b>
-</div>
-
-</div>
-
 <div class="footer">
-💛 Tabungan Emas Perhiasan © 2026
+✨ Tabungan Emas Premium 2026
 </div>
+
+</div>
+
+<script>
+
+new Chart(
+document.getElementById('chart'),
+{
+type:'line',
+data:{
+labels:[
+'Sebelumnya',
+'Terbaru',
+'Saat Ini'
+],
+datasets:[{
+label:'Nilai Aset',
+data:[
+5800000,
+4236000,
+10036000
+],
+borderWidth:4,
+fill:false
+}]
+}
+});
+
+</script>
 
 </body>
 </html>
