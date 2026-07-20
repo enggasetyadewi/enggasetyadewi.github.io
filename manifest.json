@@ -1,9 +1,15 @@
 {
-  "name": "Tabungan Emas Keluarga",
-  "short_name": "Tabungan Emas",
-  "start_url": "./index.html",
+  "name": "Engga Cyber Academy",
+  "short_name": "Engga Cyber",
+  "start_url": "index.html",
   "display": "standalone",
-  "background_color": "#fff7d6",
-  "theme_color": "#d4af37",
-  "icons": []
+  "background_color": "#111111",
+  "theme_color": "#00ff99",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
 }
