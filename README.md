@@ -1,3 +1,93 @@
-# enggasetyadewi.github.io
-Misi: bertahan hidup dengan Wi-Fi dan kreativitas.
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Engga Setya Dewi</title>
 
+<style>
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f5f7fa;
+    text-align:center;
+}
+
+.container{
+    max-width:400px;
+    margin:auto;
+    padding:30px;
+}
+
+.pp{
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid #0077ff;
+    margin-top:20px;
+}
+
+h1{
+    color:#0077ff;
+}
+
+.bio{
+    color:#555;
+    margin-bottom:30px;
+}
+
+.tombol{
+    display:block;
+    text-decoration:none;
+    background:#0077ff;
+    color:white;
+    padding:15px;
+    margin:12px 0;
+    border-radius:12px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.tombol:hover{
+    background:#0056cc;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<img src="pp.jpg" class="pp">
+
+<h1>Engga Setya Dewi</h1>
+
+<p class="bio">
+Misi: Bertahan hidup dengan Wi-Fi dan kreativitas 🌸
+</p>
+
+<a class="tombol"
+href="https://wa.me/628xxxxxxxxxx">
+📱 WhatsApp
+</a>
+
+<a class="tombol"
+href="https://youtube.com/@lucunyamereka">
+▶️ YouTube
+</a>
+
+<a class="tombol"
+href="https://instagram.com/its_dewi.__">
+📸 Instagram
+</a>
+
+<a class="tombol"
+href="https://github.com/enggasetyadewi">
+💻 GitHub
+</a>
+
+</div>
+
+</body>
+</html>
