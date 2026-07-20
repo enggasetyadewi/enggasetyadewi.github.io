@@ -1,360 +1,311 @@
 <!DOCTYPE html>
-<html lang="id">
+<html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Engga Cyber Academy v28</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Engga Cyber Academy v29</title>
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
 body{
-font-family:Arial,sans-serif;
-background:linear-gradient(135deg,#020617,#0f172a);
+background:#020617;
 color:white;
+font-family:Arial,sans-serif;
+text-align:center;
 padding:20px;
-padding-bottom:90px;
 }
 
-.container{
-max-width:500px;
-margin:auto;
-}
-
-.title{
-text-align:center;
+h1{
 color:#22c55e;
-margin-bottom:5px;
-}
-
-.subtitle{
-text-align:center;
-color:#94a3b8;
-margin-bottom:20px;
 }
 
 .card{
 background:#1e293b;
 border-radius:20px;
 padding:20px;
-margin-bottom:15px;
-box-shadow:0 0 15px rgba(34,197,94,.25);
-transition:.3s;
+margin:15px auto;
+max-width:450px;
+box-shadow:0 0 20px #22c55e55;
 }
 
-.card:hover{
-transform:translateY(-3px);
-}
-
-.profile{
-text-align:center;
-}
-
-.profile img{
-width:130px;
-height:130px;
+img{
+width:120px;
+height:120px;
 border-radius:50%;
-object-fit:cover;
-border:4px solid #22c55e;
-}
-
-.profile h2{
-margin-top:10px;
-}
-
-input, textarea{
-width:100%;
-padding:12px;
-border:none;
-border-radius:10px;
-margin-top:10px;
-background:#0f172a;
-color:white;
+border:3px solid #22c55e;
 }
 
 button{
-margin-top:10px;
-padding:12px;
-width:100%;
-border:none;
-border-radius:10px;
 background:#22c55e;
 color:white;
-font-weight:bold;
+border:0;
+padding:12px 20px;
+border-radius:15px;
+margin:5px;
 }
 
-.progress{
-background:#334155;
-height:22px;
-border-radius:20px;
-overflow:hidden;
-margin-top:10px;
-}
-
-.progress-bar{
-height:100%;
-width:0%;
-background:linear-gradient(90deg,#22c55e,#4ade80);
-transition:.5s;
-}
-
-.stats{
-display:flex;
-justify-content:space-between;
-gap:10px;
-margin-top:10px;
+input,textarea{
+width:90%;
+padding:10px;
+border-radius:10px;
+background:#0f172a;
+color:white;
+border:1px solid #22c55e;
 }
 
 .stat{
-flex:1;
+display:inline-block;
 background:#0f172a;
-padding:12px;
+padding:15px;
 border-radius:15px;
-text-align:center;
+margin:5px;
 }
 
-.material{
+.materi{
+cursor:pointer;
 padding:10px;
-margin-top:8px;
-background:#0f172a;
+border:1px solid #22c55e;
 border-radius:10px;
+margin:8px;
 }
 
-.bottom-nav{
-position:fixed;
-bottom:0;
-left:0;
-width:100%;
-background:#0f172a;
-display:flex;
-justify-content:space-around;
-padding:12px 0;
-box-shadow:0 -2px 10px rgba(0,0,0,.4);
-}
-
-.bottom-nav a{
-color:white;
-text-decoration:none;
-font-size:14px;
-text-align:center;
-}
-
-.footer{
-text-align:center;
-opacity:.7;
-margin-top:20px;
-}
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<h1>🟢 ENGGA CYBER ACADEMY v29</h1>
 
-<h1 class="title">🛡️ ENGGA CYBER ACADEMY</h1>
-<p class="subtitle">Future Cyber Security Specialist</p>
+<div class="card">
 
-<div class="card profile" id="profil">
 <img src="icon.png">
 
-<h2 id="nama">Engga Setya Dewi</h2>
+<h2 id="nama">Cyber Student</h2>
 
-<input type="text" id="user" placeholder="Masukkan nama">
+<input id="user" placeholder="Masukkan nama">
 
-<button onclick="simpanNama()">💾 Simpan Nama</button>
+<br><br>
+
+<button onclick="simpanNama()">Simpan Nama</button>
+
 </div>
+
 
 <div class="card">
-<h3>🏆 Profil Belajar</h3>
 
-<p>XP : <span id="xp">0</span></p>
-<p>Level : <span id="level">Beginner</span></p>
-<p>Badge : <span id="badge">🔰 Pemula</span></p>
-
-<div class="progress">
-<div class="progress-bar" id="bar"></div>
-</div>
-
-<button onclick="tambahXP()">⭐ Tambah 10 XP</button>
-</div>
-
-<div class="card" id="statistik">
-<h3>📊 Statistik</h3>
-
-<div class="stats">
+<h2>🏆 Profil Cyber</h2>
 
 <div class="stat">
-<h2 id="xpStat">0</h2>
-<p>XP</p>
+⭐ XP
+<h2 id="xp">0</h2>
 </div>
 
 <div class="stat">
-<h2>4</h2>
-<p>Materi</p>
+🏅 Level
+<h2 id="level">Beginner</h2>
 </div>
 
 <div class="stat">
-<h2 id="badgeCount">1</h2>
-<p>Badge</p>
+🎖️ Badge
+<h2 id="badge">🔰</h2>
 </div>
 
+<br>
+
+<button onclick="tambahXP()">+10 XP</button>
+
 </div>
-</div>
+
 
 <div class="card">
-<h3>🏅 Achievement</h3>
 
-<div class="material">🔰 Pemula Cyber</div>
-<div class="material">⭐ Explorer</div>
-<div class="material">🌟 Cyber Learner</div>
-<div class="material">🏆 Security Student</div>
+<h2>📚 Modul Belajar</h2>
+
+<div class="materi" onclick="belajar('Linux')">
+🐧 Linux Dasar
+</div>
+
+<div class="materi" onclick="belajar('Networking')">
+🌐 Networking
+</div>
+
+<div class="materi" onclick="belajar('Python')">
+🐍 Python
+</div>
+
+<div class="materi" onclick="belajar('Nmap')">
+🔍 Nmap
+</div>
+
+<p id="hasil"></p>
 
 </div>
+
 
 <div class="card">
-<h3>🎯 Target Belajar</h3>
 
-<div class="material">✅ Linux Dasar</div>
-<div class="material">🌐 Networking</div>
-<div class="material">🐍 Python</div>
-<div class="material">🔍 Nmap</div>
+<h2>🧪 Quiz Cyber</h2>
+
+<p>Apa fungsi Nmap?</p>
+
+<button onclick="jawab(true)">
+Scan jaringan
+</button>
+
+<button onclick="jawab(false)">
+Edit foto
+</button>
+
+<p id="quiz"></p>
+
 </div>
 
-<div class="card" id="materi">
-<h3>📚 Materi Belajar</h3>
-
-<div class="material">🐧 Linux</div>
-<div class="material">🌐 Networking</div>
-<div class="material">🐍 Python</div>
-<div class="material">🔍 Nmap</div>
-</div>
 
 <div class="card">
-<h3>🌍 Ranking Cyber</h3>
 
-<div class="material">
-🥇 Engga Setya Dewi
-</div>
+<h2>📝 Catatan Belajar</h2>
 
-<div class="material">
-🏆 XP Saat Ini:
-<span id="xpRank">0</span>
-</div>
+<textarea id="catatan"
+rows="5"
+placeholder="Tulis catatan...">
+</textarea>
 
-</div>
+<br>
 
-<div class="card" id="catatan">
-<h3>📝 Catatan Belajar</h3>
-
-<textarea id="catatanText" rows="6"
-placeholder="Tulis catatan belajar di sini..."></textarea>
-
-<button onclick="simpanCatatan()">📖 Simpan Catatan</button>
-</div>
-
-<div class="footer">
-Engga Cyber Academy © 2026
-</div>
+<button onclick="simpanCatatan()">
+Simpan
+</button>
 
 </div>
 
-<div class="bottom-nav">
-<a href="#profil">👤<br>Profil</a>
-<a href="#statistik">📊<br>Statistik</a>
-<a href="#materi">📚<br>Materi</a>
-<a href="#catatan">📝<br>Catatan</a>
-</div>
 
 <script>
-let xp = parseInt(localStorage.getItem("xp")) || 0;
 
-function updateXP(){
+let xp =
+parseInt(localStorage.getItem("xp")) || 0;
 
-let level = "Beginner";
-let badge = "🔰 Pemula";
-let badgeCount = 1;
 
-if(xp >= 50){
-level = "Explorer";
-badge = "⭐ Explorer";
-badgeCount = 2;
+function update(){
+
+document.getElementById("xp").innerHTML=xp;
+
+let level="Beginner";
+let badge="🔰 Pemula";
+
+
+if(xp>=50){
+level="Explorer";
+badge="⭐ Explorer";
 }
 
-if(xp >= 100){
-level = "Cyber Learner";
-badge = "🌟 Cyber Learner";
-badgeCount = 3;
+
+if(xp>=100){
+level="Cyber Learner";
+badge="🌟 Cyber Learner";
 }
 
-if(xp >= 200){
-level = "Security Student";
-badge = "🏆 Security Student";
-badgeCount = 4;
+
+if(xp>=200){
+level="Cyber Master";
+badge="👑 Cyber Master";
 }
 
-document.getElementById("xp").textContent = xp;
-document.getElementById("xpStat").textContent = xp;
-document.getElementById("xpRank").textContent = xp;
 
-document.getElementById("level").textContent = level;
-document.getElementById("badge").textContent = badge;
-document.getElementById("badgeCount").textContent = badgeCount;
+document.getElementById("level").innerHTML=level;
 
-let persen = Math.min(xp,100);
-document.getElementById("bar").style.width = persen + "%";
+document.getElementById("badge").innerHTML=badge;
+
 
 localStorage.setItem("xp",xp);
+
 }
+
 
 function tambahXP(){
-xp += 10;
-updateXP();
+
+xp+=10;
+
+update();
+
 }
+
 
 function simpanNama(){
-let nama = document.getElementById("user").value;
 
-if(nama.trim() !== ""){
-localStorage.setItem("engga_nama",nama);
-document.getElementById("nama").textContent = nama;
-}
-}
+let n=document.getElementById("user").value;
 
-function simpanCatatan(){
-let isi =
-document.getElementById("catatanText").value;
+localStorage.setItem("nama",n);
 
-localStorage.setItem(
-"engga_catatan",
-isi
-);
+document.getElementById("nama").innerHTML=n;
+
 }
 
-let nama =
-localStorage.getItem(
-"engga_nama"
-);
+
+let nama=
+localStorage.getItem("nama");
 
 if(nama){
-document.getElementById("nama").textContent =
-nama;
+
+document.getElementById("nama").innerHTML=nama;
+
 }
 
-let catatan =
-localStorage.getItem(
-"engga_catatan"
-);
 
-if(catatan){
-document.getElementById("catatanText").value =
-catatan;
+function belajar(x){
+
+document.getElementById("hasil").innerHTML=
+"Sedang belajar "+x+" 🚀";
+
 }
 
-updateXP();
+
+function jawab(benar){
+
+if(benar){
+
+xp+=20;
+
+document.getElementById("quiz").innerHTML=
+"Benar! +20 XP 🎉";
+
+update();
+
+}
+
+else{
+
+document.getElementById("quiz").innerHTML=
+"Salah coba lagi";
+
+}
+
+}
+
+
+function simpanCatatan(){
+
+let c=
+document.getElementById("catatan").value;
+
+localStorage.setItem("catatan",c);
+
+alert("Catatan tersimpan");
+
+}
+
+
+let c=
+localStorage.getItem("catatan");
+
+if(c){
+
+document.getElementById("catatan").value=c;
+
+}
+
+
+update();
+
 </script>
 
 </body>
