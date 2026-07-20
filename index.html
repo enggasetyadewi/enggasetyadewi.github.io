@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Engga Cyber Academy v29</title>
+<title>Engga Cyber Academy v30</title>
 
 <style>
 body{
 background:#020617;
 color:white;
-font-family:Arial,sans-serif;
+font-family:Arial;
 text-align:center;
 padding:20px;
 }
@@ -21,10 +21,10 @@ color:#22c55e;
 
 .card{
 background:#1e293b;
-border-radius:20px;
 padding:20px;
 margin:15px auto;
 max-width:450px;
+border-radius:20px;
 box-shadow:0 0 20px #22c55e55;
 }
 
@@ -39,42 +39,40 @@ button{
 background:#22c55e;
 color:white;
 border:0;
-padding:12px 20px;
-border-radius:15px;
+padding:12px;
 margin:5px;
+border-radius:12px;
 }
 
 input,textarea{
 width:90%;
 padding:10px;
-border-radius:10px;
 background:#0f172a;
 color:white;
 border:1px solid #22c55e;
-}
-
-.stat{
-display:inline-block;
-background:#0f172a;
-padding:15px;
-border-radius:15px;
-margin:5px;
-}
-
-.materi{
-cursor:pointer;
-padding:10px;
-border:1px solid #22c55e;
 border-radius:10px;
-margin:8px;
+}
+
+.menu{
+background:#0f172a;
+padding:12px;
+margin:10px;
+border-radius:10px;
+cursor:pointer;
+}
+
+.badge{
+font-size:40px;
 }
 
 </style>
+
 </head>
 
 <body>
 
-<h1>🟢 ENGGA CYBER ACADEMY v29</h1>
+<h1>🟢 ENGGA CYBER ACADEMY v30</h1>
+
 
 <div class="card">
 
@@ -82,132 +80,165 @@ margin:8px;
 
 <h2 id="nama">Cyber Student</h2>
 
-<input id="user" placeholder="Masukkan nama">
+<input id="user" placeholder="Nama siswa">
 
 <br><br>
 
-<button onclick="simpanNama()">Simpan Nama</button>
+<button onclick="login()">
+Login Siswa
+</button>
 
 </div>
+
 
 
 <div class="card">
 
-<h2>🏆 Profil Cyber</h2>
+<h2>👤 Dashboard</h2>
 
-<div class="stat">
-⭐ XP
-<h2 id="xp">0</h2>
+<p>⭐ XP : <b id="xp">0</b></p>
+
+<p>🏆 Level : <b id="level">Beginner</b></p>
+
+<div class="badge" id="badge">
+🔰
 </div>
 
-<div class="stat">
-🏅 Level
-<h2 id="level">Beginner</h2>
-</div>
+<p id="status">
+Siswa Baru
+</p>
 
-<div class="stat">
-🎖️ Badge
-<h2 id="badge">🔰</h2>
-</div>
-
-<br>
-
-<button onclick="tambahXP()">+10 XP</button>
+<button onclick="tambahXP()">
+Belajar +10 XP
+</button>
 
 </div>
+
 
 
 <div class="card">
 
-<h2>📚 Modul Belajar</h2>
+<h2>📚 Modul Cyber</h2>
 
-<div class="materi" onclick="belajar('Linux')">
+
+<div class="menu" onclick="materi('Linux')">
 🐧 Linux Dasar
 </div>
 
-<div class="materi" onclick="belajar('Networking')">
+
+<div class="menu" onclick="materi('Networking')">
 🌐 Networking
 </div>
 
-<div class="materi" onclick="belajar('Python')">
+
+<div class="menu" onclick="materi('Python')">
 🐍 Python
 </div>
 
-<div class="materi" onclick="belajar('Nmap')">
+
+<div class="menu" onclick="materi('Nmap')">
 🔍 Nmap
 </div>
 
-<p id="hasil"></p>
+
+<p id="materi">
+Pilih materi
+</p>
 
 </div>
+
+
 
 
 <div class="card">
 
 <h2>🧪 Quiz Cyber</h2>
 
-<p>Apa fungsi Nmap?</p>
+<p>Apa kegunaan Nmap?</p>
 
-<button onclick="jawab(true)">
+<button onclick="quiz(true)">
 Scan jaringan
 </button>
 
-<button onclick="jawab(false)">
-Edit foto
+<button onclick="quiz(false)">
+Membuat gambar
 </button>
 
-<p id="quiz"></p>
+<p id="hasil">
+-
+</p>
 
 </div>
+
+
 
 
 <div class="card">
 
-<h2>📝 Catatan Belajar</h2>
+<h2>📜 Sertifikat</h2>
 
-<textarea id="catatan"
-rows="5"
-placeholder="Tulis catatan...">
-</textarea>
+<p id="sertifikat">
+🏅 Sertifikat Engga Cyber Academy<br>
+🌸 Engga Setya Dewi<br>
+Security Student
+</p>
+</p>
+
+</div>
+
+
+
+
+<div class="card">
+
+<h2>📝 Catatan</h2>
+
+<textarea id="catatan" rows="5"></textarea>
 
 <br>
 
-<button onclick="simpanCatatan()">
-Simpan
+<button onclick="saveNote()">
+Simpan Catatan
 </button>
 
 </div>
+
+
 
 
 <script>
 
 let xp =
-parseInt(localStorage.getItem("xp")) || 0;
+Number(localStorage.getItem("xp")) || 0;
 
 
 function update(){
 
 document.getElementById("xp").innerHTML=xp;
 
+
 let level="Beginner";
-let badge="🔰 Pemula";
+let badge="🔰";
 
 
 if(xp>=50){
 level="Explorer";
-badge="⭐ Explorer";
+badge="⭐";
 }
 
 
 if(xp>=100){
 level="Cyber Learner";
-badge="🌟 Cyber Learner";
+badge="🌟";
 }
 
 
 if(xp>=200){
 level="Cyber Master";
-badge="👑 Cyber Master";
+badge="👑";
+
+document.getElementById("sertifikat").innerHTML=
+"🏅 Sertifikat Engga Cyber Academy";
 }
 
 
@@ -221,6 +252,7 @@ localStorage.setItem("xp",xp);
 }
 
 
+
 function tambahXP(){
 
 xp+=10;
@@ -230,19 +262,23 @@ update();
 }
 
 
-function simpanNama(){
 
-let n=document.getElementById("user").value;
+function login(){
 
-localStorage.setItem("nama",n);
+let nama=
+document.getElementById("user").value;
 
-document.getElementById("nama").innerHTML=n;
+localStorage.setItem("nama",nama);
+
+document.getElementById("nama").innerHTML=nama;
 
 }
 
 
+
 let nama=
 localStorage.getItem("nama");
+
 
 if(nama){
 
@@ -251,55 +287,57 @@ document.getElementById("nama").innerHTML=nama;
 }
 
 
-function belajar(x){
 
-document.getElementById("hasil").innerHTML=
-"Sedang belajar "+x+" 🚀";
+function materi(x){
+
+document.getElementById("materi").innerHTML=
+"Belajar "+x+" 🚀";
 
 }
 
 
-function jawab(benar){
 
-if(benar){
+function quiz(jawab){
+
+if(jawab){
 
 xp+=20;
 
-document.getElementById("quiz").innerHTML=
-"Benar! +20 XP 🎉";
+document.getElementById("hasil").innerHTML=
+"Benar +20 XP 🎉";
 
 update();
 
-}
+}else{
 
-else{
-
-document.getElementById("quiz").innerHTML=
-"Salah coba lagi";
+document.getElementById("hasil").innerHTML=
+"Salah ❌";
 
 }
 
 }
 
 
-function simpanCatatan(){
 
-let c=
-document.getElementById("catatan").value;
+function saveNote(){
 
-localStorage.setItem("catatan",c);
+localStorage.setItem(
+"note",
+document.getElementById("catatan").value
+);
 
 alert("Catatan tersimpan");
 
 }
 
 
-let c=
-localStorage.getItem("catatan");
 
-if(c){
+let note=
+localStorage.getItem("note");
 
-document.getElementById("catatan").value=c;
+if(note){
+
+document.getElementById("catatan").value=note;
 
 }
 
@@ -308,5 +346,8 @@ update();
 
 </script>
 
+
 </body>
 </html>
+
+
